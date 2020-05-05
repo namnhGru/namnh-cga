@@ -1,7 +1,7 @@
 <template>
   <div class="grid-writing-template">
     <h1 class="vertical-big-headline">Writing</h1>
-    <p class="col-start-2 col-end-4 font-serif text-xl">
+    <p class="col-start-2 col-end-3 font-serif text-xl">
       My writing on this site is mostly personal and self-contained technology
     </p>
     <writing-article-list
@@ -10,7 +10,7 @@
     ></writing-article-list>
     <writing-filter :content="content"></writing-filter>
     <writing-post-list
-      class="col-start-2 col-end-4"
+      class="col-start-2 col-end-3"
       :posts="posts"
     ></writing-post-list>
   </div>
@@ -124,7 +124,8 @@ export default {
 
 <style lang="postcss">
 .grid-writing-template {
-  @apply grid grid-cols-5 col-gap-32 p-16;
+  @apply grid col-gap-16 p-16;
+  grid-template-columns: 1fr 3fr 2fr;
   grid-template-rows: 250px 1fr;
   position: relative;
   background-color: theme('color.primary');
@@ -135,9 +136,6 @@ export default {
   transform-origin: 15% 130%;
   position: absolute;
   @apply uppercase font-gotham font-black text-6xl tracking-widest;
-}
-.col-2-row-2 {
-  @apply col-span-2 row-span-2;
 }
 .font-serif {
   @apply font-sourceserif;
