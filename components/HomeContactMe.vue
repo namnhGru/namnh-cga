@@ -7,20 +7,20 @@
         <p>
           <label for="name">Name</label>
           <br />
-          <input type="text" name="name" />
+          <input class="width-16 border-bottom" type="text" name="name" />
         </p>
         <p>
           <label for="email">Email</label>
           <br />
-          <input type="email" name="email" />
+          <input class="width-16 border-bottom" type="email" name="email" />
         </p>
         <p type="message">
           <label for="message">Message</label>
           <br />
-          <textarea name="message"></textarea>
+          <textarea class="width-16 border-bottom" name="message"></textarea>
         </p>
         <p type="message">
-          <button type="submit">Send</button>
+          <button class="width-16 btn-send-to-me" type="submit">Send</button>
         </p>
       </form>
     </div>
@@ -38,12 +38,24 @@ export default {}
   @apply p-24 flex flex-col items-end;
 }
 .text-white {
-  @apply font-gotham font-medium text-3xl tracking-normal;
+  @apply font-gotham font-black text-3xl tracking-normal;
   color: theme('color.white');
 }
 .form-contact {
   background-color: theme('color.gray_less_transparent');
-  @apply px-32 py-16 m-12 flex flex-col items-center shadow-xl font-hairline text-xl uppercase font-gotham tracking-widest;
+  @apply px-16 py-16 m-12 flex flex-col items-center shadow-xl font-hairline text-xl uppercase font-gotham tracking-widest;
   color: theme('color.gray');
+}
+.width-16 {
+  @apply w-64;
+}
+.border-bottom {
+  @apply border-b-2 border-orange-500;
+}
+
+.btn-send-to-me {
+  background-color: theme('color.orange_500');
+  color: theme('color.primary');
+  @apply rounded-full;
 }
 </style>

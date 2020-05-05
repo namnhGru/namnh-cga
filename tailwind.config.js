@@ -11,11 +11,14 @@ module.exports = {
       gray: '#b5b3b3',
       gray_less_transparent: 'rgba(20,22,24,.8)',
       gray_more_transparent: 'rgba(20,22,24,.7)',
+      gray_transparent: '#3F3F3F',
       white: '#fff',
-      light_nude: '#F1F0ED'
+      light_nude: '#F1F0ED',
+      orange_500: '#f6ad55'
     },
     fontFamily: {
-      gotham: ['Gotham']
+      gotham: ['Gotham'],
+      sourceserif: ['SourceSerif']
     }
   },
   variants: {},

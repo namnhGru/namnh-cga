@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>ON THIS SITE</h1>
-    <ul>
-      <li v-for="(post, i) in posts" :key="i">
+    <h1 class="horizontal-big-headline">ON THIS SITE</h1>
+    <ul class="flex flex-col">
+      <li v-for="(post, i) in posts" :key="i" class="w-full">
         <writing-post :post="post"></writing-post>
       </li>
     </ul>
@@ -23,4 +23,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="postcss">
+.horizontal-big-headline {
+  @apply font-gotham text-6xl font-black;
+}
+</style>

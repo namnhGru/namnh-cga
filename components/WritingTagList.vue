@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h6 v-for="(tag, j) in post.tags" :key="j">
+  <div class="flex justify-start">
+    <h6 v-for="(tag, j) in tags" :key="j" class="tag-badge">
       <writing-tag :tag="tag"></writing-tag>
     </h6>
   </div>
@@ -19,5 +19,15 @@ export default {
   }
 }
 </script>
-
-<style></style>
+<style lang="postcss">
+.tag-badge {
+  @apply px-3 py-1 mr-2 my-3 border uppercase font-gotham;
+  color: theme('color.orange_500');
+  border-color: theme('color.light_nude');
+  transition: color 0.5s, border-color 0.5s;
+}
+.tag-badge:hover {
+  color: theme('color.light_nude');
+  border-color: theme('color.orange_500');
+}
+</style>

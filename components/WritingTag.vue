@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ tag.title }}
+    {{ tag }}
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   props: {
     tag: {
-      type: Object,
+      type: String,
       required: true
     }
   }
