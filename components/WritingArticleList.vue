@@ -1,6 +1,6 @@
 <template>
   <div class="article-list">
-    <h2 class="horizontal-big-headline">Technical writing</h2>
+    <h2 class="horizontal-big-headline">Technical</h2>
     <ul class="list-style-none">
       <li v-for="(article, i) in articles" :key="i" class="list-article">
         <writing-article :article="article"></writing-article>
