@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="nav nav-primary">
-      <nuxt-link to="/homepage" class="logo">
+      <nuxt-link to="/" class="logo">
         <SiteLogo class="logo-art"></SiteLogo>
         <span>Nam Nguyen</span>
       </nuxt-link>

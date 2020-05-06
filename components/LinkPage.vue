@@ -13,8 +13,8 @@ export default {
   data() {
     return {
       menus: [
-        { title: 'Writing', url: '/writingpage' },
-        { title: 'Projects', url: '/projectpage' }
+        { title: 'Writing', url: '/writing' },
+        { title: 'Projects', url: '/project' }
       ]
     }
   }

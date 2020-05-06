@@ -1,7 +1,7 @@
 <template>
   <div>
     <footer>
-      <nuxt-link to="/homepage">
+      <nuxt-link to="/">
         <SiteLogo></SiteLogo>
       </nuxt-link>
       <LinkPage class="footer-link"></LinkPage>
