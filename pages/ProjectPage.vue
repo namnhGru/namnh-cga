@@ -6,7 +6,7 @@
       class="col-start-2 col-end-3 row-span-2"
     ></ProjectCodePenList>
     <ProjectGitHubList :github="github" class="row-span-2"></ProjectGitHubList>
-    <p class="tag-filter">
+    <p class="follow-me">
       Follow me on
       <nuxt-link to="https://github.com" class="link-to">Github</nuxt-link>/
       <nuxt-link to="https://github.com" class="link-to">CodePen</nuxt-link>
@@ -142,7 +142,7 @@ export default {
 .font-serif {
   @apply font-sourceserif;
 }
-.tag-filter {
+.follow-me {
   @apply font-sourceserif text-lg font-medium pt-32 pl-8;
   color: theme('color.gray');
   opacity: 0.8;

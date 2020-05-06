@@ -1,6 +1,6 @@
 <template>
   <div class="border-bottom-post">
-    <h3 class="horizontal-small-headline">{{ pen.title }}</h3>
+    <h3 class="horizontal-tiny-headline">{{ pen.title }}</h3>
     <p class="description-format">{{ pen.description }}</p>
     <a :href="pen.url" target="_blank"
       ><button class="pill-btn">See Pen</button></a
@@ -21,8 +21,8 @@ export default {
 </script>
 
 <style lang="postcss">
-.horizontal-small-headline {
-  @apply uppercase font-gotham font-black text-3xl;
+.horizontal-tiny-headline {
+  @apply uppercase font-gotham font-black text-2xl;
 }
 .description-format {
   @apply font-sourceserif text-xl;
