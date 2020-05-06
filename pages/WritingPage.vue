@@ -118,6 +118,9 @@ export default {
   },
   methods: {
     filterPost(tag) {}
+  },
+  transition: {
+    mode: 'out-in'
   }
 }
 </script>
@@ -133,7 +136,7 @@ export default {
 }
 .vertical-big-headline {
   transform: rotate(90deg);
-  transform-origin: 15% 130%;
+  transform-origin: 20% 120%;
   position: absolute;
   @apply uppercase font-gotham font-black text-6xl tracking-widest;
 }

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>GITHUB</h2>
+    <h2 class="horizontal-medium-headline">GITHUB</h2>
     <table>
       <tbody>
         <tr v-for="(git, i) in github" :key="i">
@@ -25,4 +25,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="postcss">
+.horizontal-small-headline {
+  @apply uppercase font-gotham font-black text-3xl;
+}
+.horizontal-medium-headline {
+  @apply uppercase text-4xl font-black font-gotham;
+}
+.horizontal-big-headline {
+  @apply font-gotham text-6xl font-black;
+}
+</style>

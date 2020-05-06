@@ -51,6 +51,7 @@ export default {
 }
 .tag-filter:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .line {
   width: 75px;
