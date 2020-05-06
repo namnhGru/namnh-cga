@@ -2,7 +2,7 @@
   <div class="about-me-div">
     <h2 class="text-primary">About Me</h2>
     <div class="about-me-paragraph">
-      <img src="/portrait-man.jpg" alt="" />
+      <img src="/rsz_2015-portrait.jpg" class="portrait-man" alt="" />
       <p>
         Greeting! <br />
         Nam Nguyen is a fullstack developer with 3 years of experience in
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="postcss">
+.portrait-man {
+  object-fit: cover;
+}
 .about-me-div {
   background: url('/dad-and-daughter.jpg'), theme('color.light_nude');
   @apply bg-no-repeat bg-contain;
@@ -44,7 +47,7 @@ export default {
   background-position: right -80% bottom 100%;
   @media (max-width: 736px) {
     @apply p-0 pt-5;
-    background: theme('color.light_nude');
+    background: theme('color.primary');
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     background: theme('color.light_nude');
@@ -53,6 +56,13 @@ export default {
 .text-primary {
   color: theme('color.primary');
   @apply mb-3 font-gotham font-black text-3xl uppercase;
+  @media (max-width: 736px) {
+    @apply text-center;
+    color: theme('color.white');
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background: theme('color.light_nude');
+  }
 }
 .about-me-paragraph {
   background: theme('color.gray_less_transparent');

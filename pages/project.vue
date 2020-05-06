@@ -1,14 +1,8 @@
 <template>
   <div class="grid-project-template">
     <h1 class="vertical-big-headline">Projects</h1>
-    <ProjectCodePenList
-      :pens="pens"
-      class="col-start-2 col-end-3 row-span-2 ipad-codepen"
-    ></ProjectCodePenList>
-    <ProjectGitHubList
-      :github="github"
-      class="row-span-2 ipad-github"
-    ></ProjectGitHubList>
+    <ProjectCodePenList :pens="pens" class="ipad-codepen"></ProjectCodePenList>
+    <ProjectGitHubList :github="github" class="ipad-github"></ProjectGitHubList>
     <p class="follow-me">
       Follow me on
       <nuxt-link to="https://github.com" class="link-to">Github</nuxt-link>/
@@ -171,9 +165,21 @@ export default {
   cursor: pointer;
 }
 .ipad-github {
-  @apply col-start-1 col-span-2;
+  @apply col-start-3 row-start-1 row-span-2;
+  @media (max-width: 736px) {
+    @apply row-start-3 col-start-1 p-0 col-span-2;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply row-start-3 col-start-1 p-0 col-span-2;
+  }
 }
 .ipad-codepen {
-  @apply col-start-1;
+  @apply col-start-2 row-start-1 col-span-2;
+  @media (max-width: 736px) {
+    @apply row-start-2 col-start-1 p-0 col-span-2;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply row-start-2 col-start-1 p-0 col-span-2;
+  }
 }
 </style>
