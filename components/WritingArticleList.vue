@@ -26,7 +26,7 @@ export default {
 <style lang="postcss">
 .article-list {
   @apply pl-24;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply pl-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

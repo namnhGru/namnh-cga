@@ -129,7 +129,7 @@ export default {
   position: relative;
   background-color: theme('color.primary');
   color: theme('color.white');
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     grid-template-columns: 100px 2fr;
     grid-template-rows: 250px 1fr auto;
     @apply col-gap-0 row-gap-16 px-8;
@@ -147,7 +147,7 @@ export default {
   @apply font-sourceserif text-lg font-medium pt-32 pl-8;
   color: theme('color.gray');
   opacity: 0.8;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply row-start-1 col-start-2 p-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -166,7 +166,7 @@ export default {
 }
 .ipad-github {
   @apply col-start-3 row-start-1 row-span-2;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply row-start-3 col-start-1 p-0 col-span-2;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -175,7 +175,7 @@ export default {
 }
 .ipad-codepen {
   @apply col-start-2 row-start-1 row-span-2;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply row-start-2 col-start-1 p-0 col-span-2 row-span-1;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

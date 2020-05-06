@@ -36,7 +36,7 @@ export default {}
   background-color: theme('color.gray_more_transparent');
   color: theme('color.white');
   @apply p-24 flex flex-col items-end;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply p-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -51,7 +51,7 @@ export default {}
   background-color: theme('color.gray_less_transparent');
   @apply px-16 py-16 m-12 flex flex-col items-center shadow-xl font-hairline text-xl uppercase font-gotham tracking-widest;
   color: theme('color.gray');
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply w-full m-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

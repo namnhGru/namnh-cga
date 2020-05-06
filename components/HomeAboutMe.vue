@@ -45,7 +45,7 @@ export default {
   @apply bg-no-repeat bg-contain;
   background-size: 70%;
   background-position: right -80% bottom 100%;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply p-0 pt-5;
     background: theme('color.primary');
   }
@@ -56,7 +56,7 @@ export default {
 .text-primary {
   color: theme('color.primary');
   @apply mb-3 font-gotham font-black text-3xl uppercase;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply text-center;
     color: theme('color.white');
   }
@@ -68,7 +68,7 @@ export default {
   background: theme('color.gray_less_transparent');
   color: theme('color.white');
   @apply p-5 w-8/12 bg-opacity-50 text-justify font-sourceserif text-xl shadow-xl;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply w-full;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

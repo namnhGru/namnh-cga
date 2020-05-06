@@ -127,7 +127,7 @@ export default {
 
 <style lang="postcss">
 .writing-filter {
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     display: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -141,7 +141,7 @@ export default {
   position: relative;
   background-color: theme('color.primary');
   color: theme('color.white');
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     grid-template-columns: 100px 2fr;
     grid-template-rows: 250px 1fr auto;
     @apply col-gap-0 row-gap-16 px-8;
@@ -153,7 +153,7 @@ export default {
   }
 }
 .ipad-post {
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply col-span-2 col-start-1;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -161,7 +161,7 @@ export default {
   }
 }
 .ipad-article {
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply col-span-2 col-start-1 row-start-3;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -173,7 +173,7 @@ export default {
   transform-origin: 20% 120%;
   position: absolute;
   @apply uppercase font-gotham font-black text-6xl tracking-widest;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     transform-origin: 5% 90%;
   }
 }

@@ -23,7 +23,7 @@ export default {
 .nav {
   background-color: theme('color.primary');
   @apply text-white flex flex-row justify-between p-4;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply flex-wrap justify-center;
   }
 }
@@ -31,13 +31,13 @@ export default {
   @apply flex items-center;
 }
 .logo-art {
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
 .link-page {
   @apply flex justify-center w-2/12;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     @apply w-8/12;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

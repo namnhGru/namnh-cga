@@ -54,7 +54,7 @@ export default {
   right: -10%;
   color: theme('color.primary');
   transition: all 0.2s ease;
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     right: 0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -64,7 +64,7 @@ export default {
 .pill-btn:hover {
   right: -11%;
   color: theme('color.white');
-  @media (max-width: 736px) {
+  @media (max-width: 767px) {
     right: -1px;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
