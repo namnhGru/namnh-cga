@@ -1,6 +1,4 @@
-# codinground.art
-
-> my portfolio
+# SOURCE CODE FOR MY BLOG
 
 ## Build Setup
 
