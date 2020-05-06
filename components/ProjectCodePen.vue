@@ -3,7 +3,7 @@
     <h3 class="horizontal-tiny-headline">{{ pen.title }}</h3>
     <p class="description-format">{{ pen.description }}</p>
     <a :href="pen.url" target="_blank"
-      ><button class="pill-btn">See Pen</button></a
+      ><button class="pill-pen-btn">See Pen</button></a
     >
     <iframe src="" frameborder="0"></iframe>
   </div>
@@ -40,7 +40,7 @@ export default {
 .border-bottom-post:hover {
   opacity: 1;
 }
-.pill-btn {
+.pill-pen-btn {
   @apply uppercase rounded-full px-8 py-1 font-gotham font-hairline;
   background-color: theme('color.orange_500');
   position: absolute;
@@ -49,7 +49,7 @@ export default {
   color: theme('color.primary');
   transition: all 0.2s ease;
 }
-.pill-btn:hover {
+.pill-pen-btn:hover {
   right: -1%;
   color: theme('color.white');
 }

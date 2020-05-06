@@ -3,8 +3,8 @@
     <h3 class="horizontal-tiny-headline">
       <a :href="git.url">{{ git.title }}</a>
     </h3>
-    <p class="time-format">{{ `✩ ${git.star}` }}</p>
-    <p class="time-format">{{ git.description }}</p>
+    <p class="description-format">{{ `✩ ${git.star}` }}</p>
+    <p class="description-format">{{ git.description }}</p>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
 .horizontal-tiny-headline {
   @apply uppercase font-gotham font-black text-2xl;
 }
-.time-format {
+.description-format {
   @apply font-sourceserif text-xl;
   color: theme('color.gray');
 }

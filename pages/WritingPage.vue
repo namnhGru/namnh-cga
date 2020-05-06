@@ -2,7 +2,7 @@
   <div class="grid-writing-template">
     <h1 class="vertical-big-headline">Writing</h1>
     <p class="col-start-2 col-end-3 font-serif text-xl">
-      My writing on this site is mostly personal and self-contained technology
+      My writing on this site is mostly personal and self-contained technology.
     </p>
     <writing-article-list
       :articles="articles"

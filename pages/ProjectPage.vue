@@ -1,6 +1,6 @@
 <template>
   <div class="grid-writing-template">
-    <h1 class="vertical-big-headline">Project</h1>
+    <h1 class="vertical-big-headline">Projects</h1>
     <ProjectCodePenList
       :pens="pens"
       class="col-start-2 col-end-3 row-span-2"
