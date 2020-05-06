@@ -28,7 +28,7 @@ export default {
   @apply flex items-center;
 }
 .link-page {
-  @apply flex justify-center w-3/12;
+  @apply flex justify-center w-2/12;
 }
 span {
   @apply pl-3 font-gotham font-medium text-3xl uppercase;

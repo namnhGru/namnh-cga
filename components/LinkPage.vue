@@ -14,7 +14,6 @@ export default {
     return {
       menus: [
         { title: 'Writing', url: '/writingpage' },
-        { title: 'Speaking', url: '/speaking' },
         { title: 'Project', url: '/projectpage' }
       ]
     }

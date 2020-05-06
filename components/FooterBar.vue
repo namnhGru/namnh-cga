@@ -31,7 +31,7 @@ footer > * {
   @apply mb-3;
 }
 .footer-link {
-  @apply flex flex-row justify-center w-3/12;
+  @apply flex flex-row justify-center w-2/12;
 }
 hr {
   @apply w-10/12 h-1 opacity-25;
