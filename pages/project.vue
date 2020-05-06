@@ -176,10 +176,10 @@ export default {
 .ipad-codepen {
   @apply col-start-2 row-start-1 row-span-2;
   @media (max-width: 736px) {
-    @apply row-start-2 col-start-1 p-0 col-span-2;
+    @apply row-start-2 col-start-1 p-0 col-span-2 row-span-1;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
-    @apply row-start-2 col-start-1 p-0 col-span-2;
+    @apply row-start-2 col-start-1 p-0 col-span-2 row-span-1;
   }
 }
 </style>
