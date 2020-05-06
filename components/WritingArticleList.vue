@@ -26,9 +26,18 @@ export default {
 <style lang="postcss">
 .article-list {
   @apply pl-24;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply pl-0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply pl-0;
+  }
 }
 .horizontal-medium-headline {
   @apply uppercase text-4xl font-black font-gotham;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply text-6xl;
+  }
 }
 .list-style-none {
   list-style: none;

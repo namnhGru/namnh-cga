@@ -32,6 +32,12 @@ footer > * {
 }
 .footer-link {
   @apply flex flex-row justify-center w-2/12;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply w-8/12;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply w-4/12;
+  }
 }
 hr {
   @apply w-10/12 h-1 opacity-25;

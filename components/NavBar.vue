@@ -2,7 +2,7 @@
   <div>
     <nav class="nav nav-primary">
       <nuxt-link to="/homepage" class="logo">
-        <SiteLogo></SiteLogo>
+        <SiteLogo class="logo-art"></SiteLogo>
         <span>Nam Nguyen</span>
       </nuxt-link>
       <LinkPage class="link-page"></LinkPage>
@@ -23,12 +23,26 @@ export default {
 .nav {
   background-color: theme('color.primary');
   @apply text-white flex flex-row justify-between p-4;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply flex-wrap justify-center;
+  }
 }
 .logo {
   @apply flex items-center;
 }
+.logo-art {
+  @media (min-width: 414px) and (max-width: 736px) {
+    display: none;
+  }
+}
 .link-page {
   @apply flex justify-center w-2/12;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply w-8/12;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply w-4/12;
+  }
 }
 span {
   @apply pl-3 font-gotham font-medium text-3xl uppercase;

@@ -32,7 +32,4 @@ export default {
 .horizontal-medium-headline {
   @apply uppercase text-4xl font-black font-gotham;
 }
-.horizontal-big-headline {
-  @apply font-gotham text-6xl font-black;
-}
 </style>

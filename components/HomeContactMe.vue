@@ -36,6 +36,12 @@ export default {}
   background-color: theme('color.gray_more_transparent');
   color: theme('color.white');
   @apply p-24 flex flex-col items-end;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply p-0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply items-center;
+  }
 }
 .text-white {
   @apply font-gotham font-black text-3xl tracking-normal;
@@ -45,6 +51,12 @@ export default {}
   background-color: theme('color.gray_less_transparent');
   @apply px-16 py-16 m-12 flex flex-col items-center shadow-xl font-hairline text-xl uppercase font-gotham tracking-widest;
   color: theme('color.gray');
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply w-full m-0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply px-40;
+  }
 }
 .width-16 {
   @apply w-64;

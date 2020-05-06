@@ -1,11 +1,14 @@
 <template>
-  <div class="grid-writing-template">
+  <div class="grid-project-template">
     <h1 class="vertical-big-headline">Projects</h1>
     <ProjectCodePenList
       :pens="pens"
-      class="col-start-2 col-end-3 row-span-2"
+      class="col-start-2 col-end-3 row-span-2 ipad-codepen"
     ></ProjectCodePenList>
-    <ProjectGitHubList :github="github" class="row-span-2"></ProjectGitHubList>
+    <ProjectGitHubList
+      :github="github"
+      class="row-span-2 ipad-github"
+    ></ProjectGitHubList>
     <p class="follow-me">
       Follow me on
       <nuxt-link to="https://github.com" class="link-to">Github</nuxt-link>/
@@ -125,19 +128,23 @@ export default {
 </script>
 
 <style lang="postcss">
-.grid-writing-template {
+.grid-project-template {
   @apply grid col-gap-16 p-16;
   grid-template-columns: 1fr 3fr 2fr;
   grid-template-rows: 250px 1fr;
   position: relative;
   background-color: theme('color.primary');
   color: theme('color.white');
-}
-.vertical-big-headline {
-  transform: rotate(90deg);
-  transform-origin: 20% 120%;
-  position: absolute;
-  @apply uppercase font-gotham font-black text-6xl tracking-widest;
+  @media (min-width: 414px) and (max-width: 736px) {
+    grid-template-columns: 100px 2fr;
+    grid-template-rows: 250px 1fr auto;
+    @apply col-gap-0 row-gap-16 px-8;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: 150px 2fr;
+    grid-template-rows: 250px 1fr auto;
+    @apply col-gap-0 row-gap-16;
+  }
 }
 .font-serif {
   @apply font-sourceserif;
@@ -146,6 +153,12 @@ export default {
   @apply font-sourceserif text-lg font-medium pt-32 pl-8;
   color: theme('color.gray');
   opacity: 0.8;
+  @media (min-width: 414px) and (max-width: 736px) {
+    @apply row-start-1 col-start-2 p-0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply row-start-1 col-start-2 p-0;
+  }
 }
 .link-to {
   @apply font-black;
@@ -156,5 +169,11 @@ export default {
 .link-to:hover {
   opacity: 1;
   cursor: pointer;
+}
+.ipad-github {
+  @apply col-start-1 col-span-2;
+}
+.ipad-codepen {
+  @apply col-start-1;
 }
 </style>

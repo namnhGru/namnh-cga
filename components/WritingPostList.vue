@@ -23,8 +23,4 @@ export default {
 }
 </script>
 
-<style lang="postcss">
-.horizontal-big-headline {
-  @apply font-gotham text-6xl font-black;
-}
-</style>
+<style lang="postcss"></style>
