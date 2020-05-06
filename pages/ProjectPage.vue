@@ -135,7 +135,7 @@ export default {
   position: relative;
   background-color: theme('color.primary');
   color: theme('color.white');
-  @media (min-width: 414px) and (max-width: 736px) {
+  @media (max-width: 736px) {
     grid-template-columns: 100px 2fr;
     grid-template-rows: 250px 1fr auto;
     @apply col-gap-0 row-gap-16 px-8;
@@ -153,7 +153,7 @@ export default {
   @apply font-sourceserif text-lg font-medium pt-32 pl-8;
   color: theme('color.gray');
   opacity: 0.8;
-  @media (min-width: 414px) and (max-width: 736px) {
+  @media (max-width: 736px) {
     @apply row-start-1 col-start-2 p-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

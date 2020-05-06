@@ -1,6 +1,6 @@
 <template>
   <div class="article-list">
-    <h2 class="horizontal-medium-headline">Technical writing</h2>
+    <h2 class="horizontal-big-headline">Technical writing</h2>
     <ul class="list-style-none">
       <li v-for="(article, i) in articles" :key="i" class="list-article">
         <writing-article :article="article"></writing-article>
@@ -26,17 +26,11 @@ export default {
 <style lang="postcss">
 .article-list {
   @apply pl-24;
-  @media (min-width: 414px) and (max-width: 736px) {
+  @media (max-width: 736px) {
     @apply pl-0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     @apply pl-0;
-  }
-}
-.horizontal-medium-headline {
-  @apply uppercase text-4xl font-black font-gotham;
-  @media (min-width: 768px) and (max-width: 1024px) {
-    @apply text-6xl;
   }
 }
 .list-style-none {

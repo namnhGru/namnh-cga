@@ -42,7 +42,7 @@ export default {
   @apply bg-no-repeat bg-contain;
   background-size: 70%;
   background-position: right -80% bottom 100%;
-  @media (min-width: 414px) and (max-width: 736px) {
+  @media (max-width: 736px) {
     @apply p-0 pt-5;
     background: theme('color.light_nude');
   }
@@ -58,7 +58,7 @@ export default {
   background: theme('color.gray_less_transparent');
   color: theme('color.white');
   @apply p-5 w-8/12 bg-opacity-50 text-justify font-sourceserif text-xl shadow-xl;
-  @media (min-width: 414px) and (max-width: 736px) {
+  @media (max-width: 736px) {
     @apply w-full;
   }
   @media (min-width: 768px) and (max-width: 1024px) {

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="horizontal-medium-headline">GITHUB</h2>
+    <h2 class="horizontal-big-headline">GITHUB</h2>
     <table>
       <tbody>
         <tr v-for="(git, i) in github" :key="i">
