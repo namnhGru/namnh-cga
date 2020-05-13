@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     postCreatedAt() {
-      return formatDate(this.post.created_at)
+      return formatDate(new Date(this.post.created_at))
     }
   }
 }

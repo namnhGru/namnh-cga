@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="horizontal-big-headline">ON THIS SITE</h1>
+    <h2 class="horizontal-big-headline">ON THIS SITE</h2>
     <ul class="flex flex-col">
       <li v-for="(post, i) in posts" :key="i" class="w-full">
         <writing-post :post="post"></writing-post>

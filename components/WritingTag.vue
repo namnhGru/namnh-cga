@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ tag }}
+    {{ tag.category }}
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   props: {
     tag: {
-      type: String,
+      type: Object,
       required: true
     }
   }

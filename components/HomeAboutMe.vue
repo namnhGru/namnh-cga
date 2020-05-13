@@ -2,7 +2,8 @@
   <div class="about-me-div">
     <h2 class="text-primary">About Me</h2>
     <div class="about-me-paragraph">
-      <img src="/rsz_2015-portrait.jpg" class="portrait-man" alt="" />
+      <!-- <img src="/rsz_2015-portrait.jpg" class="portrait-man" alt="" /> -->
+      <author-portrait class="portrait-man"></author-portrait>
       <p>
         Greeting! <br />
         Nam Nguyen is a fullstack developer with 3 years of experience in
@@ -31,7 +32,8 @@
 <script>
 export default {
   components: {
-    LinkSocial: () => import('./LinkSocial.vue')
+    LinkSocial: () => import('./LinkSocial.vue'),
+    AuthorPortrait: () => import('./AuthorPortrait.vue')
   }
 }
 </script>
@@ -41,10 +43,7 @@ export default {
   object-fit: cover;
 }
 .about-me-div {
-  background: url('/dad-and-daughter.jpg'), theme('color.light_nude');
   @apply bg-no-repeat bg-contain;
-  background-size: 70%;
-  background-position: right -80% bottom 100%;
   @media (max-width: 767px) {
     @apply p-0 pt-5;
     background: theme('color.primary');
@@ -67,7 +66,7 @@ export default {
 .about-me-paragraph {
   background: theme('color.gray_less_transparent');
   color: theme('color.white');
-  @apply p-5 w-8/12 bg-opacity-50 text-justify font-sourceserif text-xl shadow-xl;
+  @apply px-6 py-10 w-auto bg-opacity-50 text-justify font-sourceserif text-xl shadow-xl;
   @media (max-width: 767px) {
     @apply w-full;
   }
@@ -81,7 +80,7 @@ p {
 .link-social {
   @apply flex justify-end;
 }
-img {
-  @apply rounded-full h-32 w-32 float-left mr-3;
+.portrait-man {
+  @apply rounded-full h-32 w-32 float-left mr-6;
 }
 </style>

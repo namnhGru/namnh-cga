@@ -19,45 +19,25 @@
 <script>
 export default {
   components: {
-    WritingFilter: () => import('../components/WritingFilter.vue'),
-    WritingPostList: () => import('../components/WritingPostList.vue'),
-    WritingArticleList: () => import('../components/WritingArticleList.vue')
+    WritingFilter: () => import('../../components/WritingFilter.vue'),
+    WritingPostList: () => import('../../components/WritingPostList.vue'),
+    WritingArticleList: () => import('../../components/WritingArticleList.vue')
+  },
+  async asyncData({ $axios }) {
+    try {
+      const { data } = await $axios.$get(
+        'https://secure-wave-64960.herokuapp.com/posts'
+      )
+      return { posts: data }
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e)
+    }
   },
   data() {
     return {
       content: ['all post', 'life update', 'all post', 'life update'],
-      posts: [
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        },
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        },
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        },
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        },
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        },
-        {
-          title: 'Why Netlify',
-          created_at: new Date(),
-          tags: ['All posts', 'Life update']
-        }
-      ],
+      posts: [],
       articles: [
         {
           title: 'How to Scope Down PRs',
