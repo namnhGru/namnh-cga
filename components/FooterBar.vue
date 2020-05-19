@@ -4,21 +4,15 @@
       <nuxt-link to="/">
         <SiteLogo></SiteLogo>
       </nuxt-link>
-      <LinkPage class="footer-link"></LinkPage>
+      <link-page class="footer-link"></link-page>
       <hr />
-      <LinkSocial></LinkSocial>
+      <link-social></link-social>
     </footer>
   </div>
 </template>
 
 <script>
-export default {
-  components: {
-    LinkPage: () => import('../components/LinkPage.vue'),
-    SiteLogo: () => import('../components/SiteLogo.vue'),
-    LinkSocial: () => import('../components/LinkSocial.vue')
-  }
-}
+export default {}
 </script>
 
 <style lang="postcss">

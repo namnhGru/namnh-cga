@@ -7,12 +7,7 @@
 </template>
 
 <script>
-export default {
-  components: {
-    FooterBar: () => import('../components/FooterBar.vue'),
-    NavBar: () => import('../components/NavBar.vue')
-  }
-}
+export default {}
 </script>
 <style>
 html {

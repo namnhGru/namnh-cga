@@ -14,14 +14,7 @@
 </template>
 
 <script>
-export default {
-  components: {
-    HomeAwesomeArt: () => import('./HomeAwesomeArt.vue'),
-    HomeAboutMe: () => import('./HomeAboutMe.vue'),
-    HomeContactMe: () => import('./HomeContactMe.vue'),
-    AuthorDadAndDaughter: () => import('./AuthorDadAndDaughter.vue')
-  }
-}
+export default {}
 </script>
 
 <style lang="postcss">

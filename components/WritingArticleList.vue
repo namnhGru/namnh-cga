@@ -11,9 +11,6 @@
 
 <script>
 export default {
-  components: {
-    WritingArticle: () => import('../components/WritingArticle.vue')
-  },
   props: {
     articles: {
       type: Array,

@@ -9,9 +9,6 @@
 
 <script>
 export default {
-  components: {
-    ProjectCodePen: () => import('../components/ProjectCodePen.vue')
-  },
   props: {
     pens: {
       type: Array,

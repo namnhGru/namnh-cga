@@ -34,6 +34,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
+    '@nuxt/components',
     '@nuxtjs/tailwindcss'
   ],
   /*
@@ -44,11 +45,17 @@ export default {
     '@nuxtjs/axios',
     'nuxt-material-design-icons'
   ],
+  components: {},
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? `https://secure-wave-64960.herokuapp.com/`
+        : `http://localhost:2000/`
+  },
   /*
    ** Build configuration
    */

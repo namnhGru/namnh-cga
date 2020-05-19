@@ -3,16 +3,15 @@
     <h3 class="horizontal-small-headline">{{ post.title }}</h3>
     <p class="time-format">{{ postCreatedAt }}</p>
     <writing-tag-list :tags="post.tags"></writing-tag-list>
-    <a :href="post.url"><button class="pill-btn">SEE POST ⟶</button></a>
+    <nuxt-link :to="`/writing/${post.slug}`"
+      ><button class="pill-btn">SEE POST ⟶</button></nuxt-link
+    >
   </div>
 </template>
 
 <script>
 import { formatDate } from './helper.js'
 export default {
-  components: {
-    WritingTagList: () => import('../components/WritingTagList.vue')
-  },
   props: {
     post: {
       type: Object,

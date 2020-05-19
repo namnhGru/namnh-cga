@@ -13,10 +13,6 @@
 
 <script>
 export default {
-  components: {
-    ProjectCodePenList: () => import('../components/ProjectCodePenList.vue'),
-    ProjectGitHubList: () => import('../components/ProjectGitHubList.vue')
-  },
   data() {
     return {
       pens: [

@@ -18,16 +18,9 @@
 
 <script>
 export default {
-  components: {
-    WritingFilter: () => import('../../components/WritingFilter.vue'),
-    WritingPostList: () => import('../../components/WritingPostList.vue'),
-    WritingArticleList: () => import('../../components/WritingArticleList.vue')
-  },
   async asyncData({ $axios }) {
     try {
-      const { data } = await $axios.$get(
-        'https://secure-wave-64960.herokuapp.com/posts'
-      )
+      const { data } = await $axios.$get('/posts')
       return { posts: data }
     } catch (e) {
       // eslint-disable-next-line no-console

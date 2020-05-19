@@ -3,7 +3,7 @@
     <nav class="nav nav-primary">
       <nuxt-link to="/" class="logo">
         <SiteLogo class="logo-art"></SiteLogo>
-        <span>Nam Nguyen</span>
+        <span class="logo-name">Nam Nguyen</span>
       </nuxt-link>
       <LinkPage class="link-page"></LinkPage>
     </nav>
@@ -11,12 +11,7 @@
 </template>
 
 <script>
-export default {
-  components: {
-    LinkPage: () => import('./LinkPage.vue'),
-    SiteLogo: () => import('./SiteLogo.vue')
-  }
-}
+export default {}
 </script>
 
 <style lang="postcss">
@@ -44,7 +39,7 @@ export default {
     @apply w-4/12;
   }
 }
-span {
+.logo-name {
   @apply pl-3 font-gotham font-medium text-3xl uppercase;
 }
 </style>

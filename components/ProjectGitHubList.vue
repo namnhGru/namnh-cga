@@ -13,9 +13,6 @@
 
 <script>
 export default {
-  components: {
-    ProjectGitHub: () => import('../components/ProjectGitHub.vue')
-  },
   props: {
     github: {
       type: Array,

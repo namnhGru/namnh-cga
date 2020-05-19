@@ -11,9 +11,6 @@
 
 <script>
 export default {
-  components: {
-    WritingPost: () => import('../components/WritingPost.vue')
-  },
   props: {
     posts: {
       type: Array,

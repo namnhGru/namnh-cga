@@ -5,9 +5,5 @@
 </template>
 
 <script>
-export default {
-  components: {
-    HomeContent: () => import('../components/HomeContent.vue')
-  }
-}
+export default {}
 </script>

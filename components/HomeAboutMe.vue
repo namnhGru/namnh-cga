@@ -30,12 +30,7 @@
 </template>
 
 <script>
-export default {
-  components: {
-    LinkSocial: () => import('./LinkSocial.vue'),
-    AuthorPortrait: () => import('./AuthorPortrait.vue')
-  }
-}
+export default {}
 </script>
 
 <style lang="postcss">
