@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "netlify": "git status; git add .; git commit -m \"push to netlify\""
+    "netlify": "git status; git add .; git commit -m \"push to netlify\"; git push"
   },
   "dependencies": {
     "@nuxt/components": "^0.2.3",
