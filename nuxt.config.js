@@ -4,7 +4,7 @@ const dynamicRoutes = async () => {
     const { data } = await axios.get(
       'https://secure-wave-64960.herokuapp.com/posts'
     )
-    return data.map((post) => `/writing/${post.slug}`)
+    return data.data.map((post) => `/writing/${post.slug}`)
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error(err)
