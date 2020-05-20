@@ -10,7 +10,6 @@ const dynamicRoutes = async () => {
     console.error(err)
   }
 }
-
 export default {
   mode: 'universal',
   /*
@@ -79,6 +78,6 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
-    routes: dynamicRoutes()
+    routes: dynamicRoutes
   }
 }
