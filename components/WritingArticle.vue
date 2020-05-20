@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { formatDate } from './helper.js'
+import { formatDate } from '../utils/helper.js'
 export default {
   props: {
     article: {

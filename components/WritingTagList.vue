@@ -8,9 +8,6 @@
 
 <script>
 export default {
-  components: {
-    WritingTag: () => import('../components/WritingTag.vue')
-  },
   props: {
     tags: {
       type: Array,

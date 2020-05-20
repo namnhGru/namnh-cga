@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { formatDate } from './helper.js'
+import { formatDate } from '../utils/helper.js'
 export default {
   props: {
     post: {
@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     postCreatedAt() {
-      return formatDate(new Date(this.post.created_at))
+      return formatDate(this.post.created_at)
     }
   }
 }

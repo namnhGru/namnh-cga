@@ -7,7 +7,7 @@
         class="tag-filter"
         @click="filterPost(item, i)"
       >
-        {{ item }}
+        {{ item.category }}
       </li>
       <div class="line" :style="computedPosition"></div>
     </ul>

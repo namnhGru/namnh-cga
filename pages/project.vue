@@ -1,8 +1,14 @@
 <template>
   <div class="grid-project-template">
     <h1 class="vertical-big-headline">Projects</h1>
-    <ProjectCodePenList :pens="pens" class="ipad-codepen"></ProjectCodePenList>
-    <ProjectGitHubList :github="github" class="ipad-github"></ProjectGitHubList>
+    <ProjectCodePenList
+      :pens="$store.state.pens.allPens"
+      class="ipad-codepen"
+    ></ProjectCodePenList>
+    <ProjectGitHubList
+      :github="$store.state.githubs.allGithubs"
+      class="ipad-github"
+    ></ProjectGitHubList>
     <p class="follow-me">
       Follow me on
       <nuxt-link to="https://github.com" class="link-to">Github</nuxt-link>/
@@ -13,106 +19,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      pens: [
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        },
-        {
-          title: 'REACT ANIMATED PAGE TRANSITIONS',
-          description:
-            'Just a small demo to show a few page transitions in React. Using GreenSock and SVG.',
-          url: 'https://github.com/'
-        }
-      ],
-      github: [
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        },
-        {
-          title: 'ANIMATED GUIDE VUE3',
-          star: 119,
-          description: 'Animated Interfaces with Vue.js Workshop Materials'
-        }
-      ]
-    }
+  async fetch({ store }) {
+    await store.dispatch('pens/getAllPens')
+    await store.dispatch('githubs/getAllGithubs')
   }
 }
 </script>

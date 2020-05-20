@@ -27,31 +27,28 @@
 </template>
 
 <script>
-import { formatDate } from '../../components/helper'
+import { formatDate } from '../../utils/helper'
 export default {
-  components: {
-    // WritingTagList: () => import('../../components/WritingTagList.vue')
-  },
-  async asyncData({ $axios, params }) {
-    try {
-      const allWritings = await $axios.$get('/posts')
-      const { data } = await $axios.$post('/posts', {
-        slug: params.slug
-      })
-      return { writing: data, articles: allWritings.data }
-    } catch (err) {
-      console.error(err)
+  async asyncData({ store, params }) {
+    if (!store.state.posts.allPosts.length) {
+      await store.dispatch('posts/getAllPosts')
     }
+    const writing = store.state.posts.allPosts.find(
+      (post) => post.slug === params.slug
+    )
+    return { writing }
   },
   data() {
     return {
-      writing: {},
-      articles: []
+      writing: {}
     }
   },
   computed: {
+    articles() {
+      return this.$store.state.posts.allPosts
+    },
     writing_createdAt() {
-      return formatDate(new Date(this.writing.created_at))
+      return formatDate(this.writing.created_at)
     }
   }
 }
@@ -84,7 +81,7 @@ export default {
   height: 400px;
 }
 .writing-content {
-  @apply relative font-sourceserif text-xl font-hairline pt-10 px-8 pb-48;
+  @apply relative font-sourceserif text-xl font-hairline pt-10 px-8 pb-12;
   color: theme('color.primary');
   background-color: theme('color.white');
 }

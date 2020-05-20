@@ -5,89 +5,26 @@
       My writing on this site is mostly personal and self-contained technology.
     </p>
     <writing-article-list
-      :articles="articles"
+      :articles="$store.state.articles.allArticles"
       class="col-2-row-2 ipad-article"
     ></writing-article-list>
-    <writing-filter class="writing-filter" :content="content"></writing-filter>
+    <writing-filter
+      class="writing-filter"
+      :content="$store.state.tags.allTags"
+    ></writing-filter>
     <writing-post-list
       class="col-start-2 col-end-3 ipad-post"
-      :posts="posts"
+      :posts="$store.state.posts.allPosts"
     ></writing-post-list>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    try {
-      const { data } = await $axios.$get('/posts')
-      return { posts: data }
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e)
-    }
-  },
-  data() {
-    return {
-      content: ['all post', 'life update', 'all post', 'life update'],
-      posts: [],
-      articles: [
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        },
-        {
-          title: 'How to Scope Down PRs',
-          url: 'adf',
-          created_at: new Date(),
-          origin: 'Netlify Blog'
-        }
-      ]
-    }
+  async fetch({ store }) {
+    await store.dispatch('posts/getAllPosts')
+    await store.dispatch('tags/getAllTags')
+    await store.dispatch('articles/getAllArticles')
   },
   methods: {
     filterPost(tag) {}
@@ -152,5 +89,8 @@ export default {
 }
 .font-serif {
   @apply font-sourceserif;
+}
+*:focus {
+  outline-style: none;
 }
 </style>
