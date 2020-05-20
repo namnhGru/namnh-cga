@@ -1,8 +1,15 @@
 import axios from 'axios'
-const dynamicRoutes = () =>
-  axios
-    .get('https://secure-wave-64960.herokuapp.com/posts')
-    .then((res) => res.data.map((post) => `/writing/${post.slug}`))
+const dynamicRoutes = async () => {
+  try {
+    const { data } = await axios.get(
+      'https://secure-wave-64960.herokuapp.com/posts'
+    )
+    return data.map((post) => `/writing/${post.slug}`)
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error(err)
+  }
+}
 
 export default {
   mode: 'universal',
@@ -72,6 +79,6 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes()
   }
 }
