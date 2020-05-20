@@ -64,32 +64,53 @@ export default {
 .writing-container {
   @apply relative pt-64 pl-16;
   background-color: theme('color.white');
+  @media (max-width: 767px) {
+    @apply p-0;
+  }
 }
 .title-container {
   @apply absolute z-50;
   top: 85px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0);
   color: theme('color.white');
+  @media (max-width: 767px) {
+    top: 50px;
+    @apply pl-10;
+  }
 }
 .big-title {
   @apply font-sourceserif text-5xl font-black;
+  @media (max-width: 767px) {
+    @apply text-4xl;
+  }
 }
 .bg-img {
   @apply absolute top-0 left-0 w-full border-b-4 bg-cover;
   border-color: theme('color.orange_500');
   background: url('/background-writing.jpg') center center no-repeat;
   height: 400px;
+  @media (max-width: 767px) {
+    @apply static;
+    height: 200px;
+  }
 }
 .writing-content {
   @apply relative font-sourceserif text-xl font-hairline pt-10 px-8 pb-12;
   color: theme('color.primary');
   background-color: theme('color.white');
+  @media (max-width: 1024px) {
+    @apply text-justify;
+  }
 }
 .blog-nav {
   @apply sticky float-right border-l pl-16 pr-24 w-3/12 py-16;
   border-color: theme('color.gray');
   top: 0px;
   margin-top: -40px;
+  @media (max-width: 1024px) {
+    @apply static;
+    display: none;
+  }
 }
 .more-on-site {
   @apply uppercase text-2xl font-black font-gotham pb-4;
