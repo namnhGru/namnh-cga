@@ -1,3 +1,9 @@
+import axios from 'axios'
+const dynamicRoutes = () =>
+  axios
+    .get('https://secure-wave-64960.herokuapp.com/posts')
+    .then((res) => res.data.map((post) => `/writing/${post.slug}`))
+
 export default {
   mode: 'universal',
   /*
@@ -64,5 +70,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    routes: dynamicRoutes
   }
 }
